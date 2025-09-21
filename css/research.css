@@ -1,0 +1,288 @@
+/* Research Section */
+.research {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.research-category {
+    margin-bottom: 60px;
+}
+
+.research-category:last-child {
+    margin-bottom: 0;
+}
+
+.research-category h3 {
+    margin-bottom: 2rem;
+    color: var(--primary);
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.research-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+/* Publications Styles */
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.publication-item {
+    display: flex;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--primary);
+}
+
+.publication-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.15);
+}
+
+.publication-icon {
+    flex: 0 0 60px;
+    height: 60px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.publication-content {
+    flex: 1;
+}
+
+.publication-content h4 {
+    color: var(--text);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.publication-authors {
+    color: var(--gray);
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.publication-venue {
+    color: var(--text);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.publication-date {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.publication-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.publication-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 2px solid var(--primary);
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.publication-link i {
+    margin-right: 8px;
+}
+
+.publication-link:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Thesis Styles */
+.thesis-item {
+    display: flex;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #17a2b8; /* Different color for thesis */
+}
+
+.thesis-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(23, 162, 184, 0.15);
+}
+
+.thesis-icon {
+    flex: 0 0 60px;
+    height: 60px;
+    background: #e8f4f8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    color: #17a2b8;
+    font-size: 1.5rem;
+}
+
+.thesis-content {
+    flex: 1;
+}
+
+.thesis-content h4 {
+    color: var(--text);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.thesis-description {
+    color: var(--gray);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.thesis-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.thesis-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.detail-value {
+    color: var(--gray);
+}
+
+.detail-value.ongoing {
+    color: #17a2b8;
+    font-weight: 600;
+}
+
+.detail-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.keyword-tag {
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .thesis-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .publication-item,
+    .thesis-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+    
+    .publication-icon,
+    .thesis-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+    
+    .publication-links {
+        justify-content: center;
+    }
+    
+    .research-category h3 {
+        text-align: center;
+    }
+    
+    .research-category h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .publication-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .publication-link {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .detail-keywords {
+        justify-content: center;
+    }
+}
+
+/* Animation for items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.publication-item {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.thesis-item {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.publication-item { animation-delay: 0.1s; }
+.thesis-item { animation-delay: 0.2s; }
